@@ -17,22 +17,22 @@ namespace SacarPromedioNotas
 
             double promedio;
             Console.Write("***********Sacar promedio de 3 notas********* ");
-            Console.Write("Digitar notas entre (0.0 a 5.0)\n");
-            Console.Write("Digite la nota 1: ");
+            Console.Write("Digitar notas entre (0,0 a 5,0) Nota: decimales con coma\n");
+            Console.Write("Digite nota del primer Corte: ");
             nota1 = double.Parse(Console.ReadLine());
-            Console.Write("Digite la nota 2: ");
+            Console.Write("Digite nota del segundo Corte: ");
             nota2 = double.Parse(Console.ReadLine());
-            Console.Write("Digite la nota 3: ");
+            Console.Write("Digite nota del tercer Corte: ");
             nota3 = double.Parse(Console.ReadLine());
-            promedio = (nota1 + nota2 + nota3) / 3;
+            promedio = (((nota1)*0.3) + ((nota2)*0.3) + ((nota3)*0.4));
 
             if ((promedio >= 3.0 && promedio <= 5.0))
             {
-                Console.WriteLine($"Su promedio fue de {promedio}, ha GANADO!!!");
+                Console.WriteLine($"Su promedio fue de {promedio}  ha GANADO!!!");
             }
             else if (promedio < 3.0 && promedio >=0.0)
             {
-                Console.WriteLine($"Su promedio fue de {promedio}, ha PERDIDO");
+                Console.WriteLine($"Su promedio fue de {promedio}  ha PERDIDO");
             }
             else
             {
